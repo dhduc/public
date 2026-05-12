@@ -1,6 +1,6 @@
 {
     "id": "43f36e14-e3f5-43c1-84c0-50a9c80dc5c7",
-    "name": "MapLibre",
+    "name": "Fantasy Parchment Map",
     "zoom": 0.8619833357855968,
     "pitch": 0,
     "center": [
@@ -13,7 +13,7 @@
             "id": "background",
             "type": "background",
             "paint": {
-                "background-color": "#D8F2FF"
+                "background-color": "#C8D9C0"
             },
             "filter": [
                 "all"
@@ -27,28 +27,32 @@
             "id": "coastline",
             "type": "line",
             "paint": {
-                "line-blur": 0.5,
-                "line-color": "#198EC8",
+                "line-blur": 1.2,
+                "line-color": "#4A3728",
                 "line-width": {
                     "stops": [
                         [
                             0,
-                            2
+                            2.5
                         ],
                         [
                             6,
-                            6
+                            5
                         ],
                         [
                             14,
-                            9
+                            8
                         ],
                         [
                             22,
-                            18
+                            14
                         ]
                     ]
-                }
+                },
+                "line-dasharray": [
+                    1,
+                    0
+                ]
             },
             "filter": [
                 "all"
@@ -102,7 +106,7 @@
                         "UKR",
                         "WSM"
                     ],
-                    "#D6C7FF",
+                    "#D4C5A9",
                     [
                         "AZE",
                         "BGD",
@@ -134,7 +138,7 @@
                         "UZB",
                         "ZMB"
                     ],
-                    "#EBCA8A",
+                    "#C8A96A",
                     [
                         "AGO",
                         "ASM",
@@ -169,7 +173,7 @@
                         "VIR",
                         "VUT"
                     ],
-                    "#C1E599",
+                    "#8FAF72",
                     [
                         "ARE",
                         "ARG",
@@ -199,7 +203,7 @@
                         "TZA",
                         "VAT"
                     ],
-                    "#E7E58F",
+                    "#C9B96E",
                     [
                         "AUT",
                         "BEL",
@@ -229,7 +233,7 @@
                         "VEN",
                         "VGB"
                     ],
-                    "#98DDA1",
+                    "#B89A7A",
                     [
                         "AIA",
                         "BIH",
@@ -268,7 +272,7 @@
                         "YEM",
                         "ZWE"
                     ],
-                    "#83D5F4",
+                    "#A8B4C8",
                     [
                         "ABW",
                         "ALB",
@@ -305,14 +309,16 @@
                         "VCT",
                         "ZAF"
                     ],
-                    "#B1BBF9",
+                    "#D8D0C0",
                     [
                         "ATA",
                         "GRL"
                     ],
-                    "#FFFFFF",
-                    "#EAB38F"
-                ]
+                    "#F0E8D0",
+                    "#D4BA8A"
+                ],
+                "fill-outline-color": "#6B4F3A",
+                "fill-opacity": 0.9
             },
             "filter": [
                 "all"
@@ -328,24 +334,24 @@
             "id": "countries-boundary",
             "type": "line",
             "paint": {
-                "line-color": "rgba(255, 255, 255, 1)",
+                "line-color": "#6B4F3A",
                 "line-width": {
                     "stops": [
                         [
                             1,
-                            1
+                            1.2
                         ],
                         [
                             6,
-                            2
+                            2.2
                         ],
                         [
                             14,
-                            6
+                            5
                         ],
                         [
                             22,
-                            12
+                            10
                         ]
                     ]
                 },
@@ -353,14 +359,19 @@
                     "stops": [
                         [
                             3,
-                            0.5
+                            0.6
                         ],
                         [
                             6,
-                            1
+                            0.9
                         ]
                     ]
-                }
+                },
+                "line-dasharray": [
+                    4,
+                    2
+                ],
+                "line-blur": 0.6
             },
             "layout": {
                 "line-cap": "round",
@@ -375,11 +386,11 @@
             "id": "geolines",
             "type": "line",
             "paint": {
-                "line-color": "#1077B0",
-                "line-opacity": 1,
+                "line-color": "#7A6A5A",
+                "line-opacity": 0.45,
                 "line-dasharray": [
-                    3,
-                    3
+                    4,
+                    6
                 ]
             },
             "filter": [
@@ -401,10 +412,10 @@
             "id": "geolines-label",
             "type": "symbol",
             "paint": {
-                "text-color": "#1077B0",
+                "text-color": "#7A6A5A",
                 "text-halo-blur": 1,
-                "text-halo-color": "rgba(255, 255, 255, 1)",
-                "text-halo-width": 1
+                "text-halo-color": "#F5EDD0",
+                "text-halo-width": 1.5
             },
             "filter": [
                 "all",
@@ -422,17 +433,18 @@
                     "stops": [
                         [
                             2,
-                            12
+                            9
                         ],
                         [
                             6,
-                            16
+                            13
                         ]
                     ]
                 },
                 "text-field": "{name}",
                 "visibility": "visible",
-                "symbol-placement": "line"
+                "symbol-placement": "line",
+                "text-letter-spacing": 0.15
             },
             "source": "maplibre",
             "maxzoom": 24,
@@ -443,29 +455,29 @@
             "id": "countries-label",
             "type": "symbol",
             "paint": {
-                "text-color": "rgba(8, 37, 77, 1)",
+                "text-color": "#2C1A0E",
                 "text-halo-blur": {
                     "stops": [
                         [
                             2,
-                            0.2
+                            0.5
                         ],
                         [
                             6,
-                            0
+                            0.2
                         ]
                     ]
                 },
-                "text-halo-color": "rgba(255, 255, 255, 1)",
+                "text-halo-color": "#F5EDD0",
                 "text-halo-width": {
                     "stops": [
                         [
                             2,
-                            1
+                            1.5
                         ],
                         [
                             6,
-                            1.6
+                            2
                         ]
                     ]
                 }
@@ -485,11 +497,11 @@
                         ],
                         [
                             4,
-                            12
+                            13
                         ],
                         [
                             6,
-                            16
+                            17
                         ]
                     ]
                 },
@@ -514,11 +526,12 @@
                             "uppercase"
                         ],
                         [
-                            2,
+                            3,
                             "none"
                         ]
                     ]
-                }
+                },
+                "text-letter-spacing": 0.12
             },
             "source": "maplibre",
             "maxzoom": 24,
@@ -530,7 +543,8 @@
             "type": "fill",
             "source": "crimea",
             "paint": {
-                "fill-color": "#D6C7FF"
+                "fill-color": "#D4C5A9",
+                "fill-opacity": 0.9
             }
         }
     ],
